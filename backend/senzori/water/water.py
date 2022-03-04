@@ -5,7 +5,7 @@ from random import randint
 import eel
 
 
-def temperature():
+def water():
     while True:
-        eel.updateTemp(randint(0, 100))
+        eel.updateWater(randint(0, 100))
         time.sleep(1)

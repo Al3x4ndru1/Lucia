@@ -8,7 +8,7 @@ import ADC
 class GroveLightSenzor:
     def __init__(self,channel):
         self.channel = channel
-        self.adc = ADC()
+       # self.adc = ADC()
 
 
     @property
