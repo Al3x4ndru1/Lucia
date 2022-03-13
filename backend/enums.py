@@ -13,7 +13,7 @@ def comunication (names):
     for item in FLowers:
         if item.name==names:
 
-            #return item.name, item.value[1],item.value[2], item.value[3],item.value[4], item.value[5]
             return item
+
 
 

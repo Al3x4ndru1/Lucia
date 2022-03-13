@@ -29,8 +29,8 @@ Water_thread.start()
 
 
 #for on/off
-Turn_thread = threading.Thread(target=turn.led)
-Turn_thread.start()
+#Turn_thread = threading.Thread(target=turn.led)
+#Turn_thread.start()
 # for cameras
 # camera_thread = threading.Thread(target=camera.client)
 
