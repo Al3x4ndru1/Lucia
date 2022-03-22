@@ -18,11 +18,9 @@ def water():
         #waterL=capacity-(nuplants*planttype)
 
         global  capacity
-        print(capacity)
         capacity = capacity - ((nuplants * planttype)/10)
         if capacity<=40:
             capacity=100
-            print("Refulling, takeing a break for 10 seconds")
             time.sleep(10)
 
         eel.updateWater(capacity)

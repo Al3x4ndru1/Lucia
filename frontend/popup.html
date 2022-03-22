@@ -21,22 +21,22 @@
 
 </head>
 <body>
-<form action="/json" method="POST"  onsubmit="sendForm()">
-<label for="lname">Type of the flower:</label><br>
+    <form action="/test" method="POST"  onsubmit="sendForm()">
+        <label for="flowers">Type of the flower:</label><br>
 
-    <select id="flowers" name="flowers">
-        <option value="Hiacintus">Hiacintus</option>
-        <option value="Rose">Rose</option>
-    </select>
-    <br><br>
-  <label for="lname">How many flowers do you have:</label><br>
-  <input type="text" placeholder="100" required="required" id="nrflowers" name="nrflowers">
-    <br>
-    <br><br>
-  <label for="lname">Type of the plant:</label><br>
-    <input type="text" placeholder="For Hiacintus, Blue jacket" id="lname" required="required" name="type">
-    <br><br>
-  <input type="submit">
+            <select id="flowers" name="flowers">
+                <option value="Hiacintus">Hiacintus</option>
+                <option value="Rose">Rose</option>
+            </select>
+            <br><br>
+          <label for="nrflowers">How many flowers do you have:</label><br>
+          <input type="text" placeholder="100" required="required" id="nrflowers" name="nrflowers">
+            <br>
+            <br><br>
+          <label for="type">Type of the plant:</label><br>
+            <input type="text" placeholder="For Hiacintus, Blue jacket" id="type" required="required" name="type">
+            <br><br>
+          <input type="submit">
 
     <script type="text/javascript">
         function sendForm(){
