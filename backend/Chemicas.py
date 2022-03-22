@@ -11,5 +11,4 @@ def comunicationChem (names):
 
     for item in Chemichals:
         if item.name==names:
-
             return item

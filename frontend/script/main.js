@@ -30,3 +30,8 @@ eel.expose(updateLedTurn);
 function updateLedTurn(LedTurnValue){
     updateLedValueTurn(LedTurnValue);
 }
+
+eel.expose(charts);
+function charts(chartValue){
+    namescarts(chartValue);
+}

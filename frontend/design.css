@@ -6,8 +6,6 @@
 	box-sizing: border-box;
 }
 
-
-
     aside{
     border: 3px solid black;
         width: 15%;
@@ -81,6 +79,17 @@
     background-color: blue;
     }
 
+    chartbutn{
+     width: 50%;
+     font-size: 24px;
+     color: white;
+     padding: 10.5px 25px;
+     padding left: 60%;
+     text-align: center;
+     text-family: Arial,serif;
+     text-decoration: none;
+     display: inline-block;
+    }
 /* Maps style */
     map{
     height:90%;

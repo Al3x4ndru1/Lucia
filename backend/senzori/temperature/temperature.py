@@ -8,4 +8,4 @@ import eel
 def temperature():
     while True:
         eel.updateTemp(randint(0, 100))
-        time.sleep(1)
+        time.sleep(5)

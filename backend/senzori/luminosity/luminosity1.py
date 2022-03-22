@@ -10,4 +10,4 @@ def luminosity():
     while True:
         var = randint(0, 100)
         eel.updateLuminosity(var)
-        time.sleep(1)
+        time.sleep(5)
