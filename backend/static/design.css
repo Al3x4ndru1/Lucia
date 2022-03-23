@@ -1,0 +1,199 @@
+/* defaults */
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+aside {
+	border: 3px solid black;
+	width: 15%;
+	padding-left: 25px;
+	padding-right: 25px;
+	float: right;
+	background-color: red;
+	overflow-y: auto;
+	min-height: 95.3vh;
+	flex-wrap: wrap;
+}
+
+article {
+	float: left;
+	padding: 20px;
+	width: 85%;
+	background-color: #333;
+	min-height: 100vh; /* only for demonstration, should be removed */
+}
+fieldset {
+	border: 1px solid red;
+	font-family: Arial, serif;
+	font-size: 40px;
+	color: lightblue;
+	padding-right: 10px;
+	padding-left: 10px;
+	float: right;
+	background-color: transparent;
+	text-decoration: none;
+}
+fieldset:text {
+	font-size: 50px;
+	text-align: center;
+}
+
+aside div.rightmenuinnerinner {
+	border: 2px solid blue;
+	background-color: lightblue;
+	height: 40px;
+	width: 20px;
+	color: black;
+	padding: 40px;
+	text-align: center;
+}
+conditions .readings {
+	border-top: 1px solid red;
+	font-family: Arial, serif;
+	font-size: 60px;
+	color: lightblue;
+	padding-right: 10px;
+	padding-left: 10px;
+	float: right;
+	background-color: transparent;
+	text-decoration: none;
+}
+/* New Button style */
+addbutton {
+	width: 15%;
+	font-size: 24px;
+	background-color: green;
+	color: white;
+	padding: 10.5px 25px;
+	text-align: center;
+	font-family: Arial, serif;
+	text-decoration: none;
+	display: inline-block;
+}
+/* Button hover */
+addbutton:hover,
+addbutton:active {
+	background-color: blue;
+}
+
+chartbutn {
+	width: 50%;
+	font-size: 24px;
+	color: white;
+	padding: 10.5px 25px;
+	padding-left: 60%;
+	text-align: center;
+	font-family: Arial, serif;
+	text-decoration: none;
+	display: inline-block;
+}
+/* Maps style */
+map {
+	height: 90%;
+	padding: 500px;
+	width: 800px;
+	height: 400;
+	border: 0;
+}
+
+/* Full-width input fields */
+input[type='text'],
+input[type='password'] {
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+}
+container {
+	padding: 16px;
+}
+
+span.psw {
+	float: right;
+	padding-top: 16px;
+}
+
+/* The Modal (background) */
+modal {
+	display: none; /* Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Sit on top */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgb(0, 0, 0); /* Fallback color */
+	background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+	padding-top: 60px;
+}
+
+/* Modal Content/Box */
+modal-content {
+	background-color: #fefefe;
+	margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+	border: 1px solid #888;
+	width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+close {
+	position: absolute;
+	right: 25px;
+	top: 0;
+	color: #000;
+	font-size: 35px;
+	font-weight: bold;
+}
+
+close:hover,
+close:focus {
+	color: red;
+	cursor: pointer;
+}
+
+/* Add Zoom Animation */
+animate {
+	-webkit-animation: animatezoom 0.6s;
+	animation: animatezoom 0.6s;
+}
+
+@-webkit-keyframes animatezoom {
+	from {
+		-webkit-transform: scale(0);
+	}
+	to {
+		-webkit-transform: scale(1);
+	}
+}
+
+@keyframes animatezoom {
+	from {
+		transform: scale(0);
+	}
+	to {
+		transform: scale(1);
+	}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+	span.psw {
+		display: block;
+		float: none;
+	}
+	cancelbtn {
+		width: 100%;
+	}
+}
+
+readings .tempnumb {
+	margin: 50px;
+	font-size: 15px;
+	text-align: center;
+}
