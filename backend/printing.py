@@ -1,18 +1,23 @@
 import glob
 from csv import reader
 import pandas as pd
-from Csv_files import *
+import os
 
-path='backend/Csv_files'
-all_files= glob.glob(path + '/*.csv')
-all_files
 
-def reader():
-    # open file in read mode
-    with open('/home/al3x4ndru1/PycharmProjects/Lucia/Csv_files/Production_2022-03-22 13:22:55.134930.csv', 'r') as read_obj:
-        # pass the file object to reader() to get the reader object
-        csv_reader = reader(read_obj, delimiter=" ")
-        # Iterate over each row in the csv using reader object
-        for line in csv_reader:
-            # row variable is a list that represents a row in csv
-            print(line)
+def credings():
+    # get data file names
+    pathf = (os.getcwd() + '/backend/Csv_files')
+    filenames = glob.glob(pathf + "/*.csv")
+
+    dfs = []
+    for filename in filenames:
+        dfs.append(pd.read_csv(filename))
+        with open(filename, 'r') as read_obj:
+            # pass the file object to reader() to get the reader object
+            csv_reader = reader(read_obj, delimiter=" ")
+            # Iterate over each row in the csv using reader object
+            for line in csv_reader:
+                # row variable is a list that represents a row in csv
+
+                if line[0] == "Cost:":
+                    print(line[1])

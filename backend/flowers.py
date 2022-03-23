@@ -1,6 +1,5 @@
 import datetime
 import random
-from backend.graphs import readdata
 from backend.enums import comunication
 from backend.enums import FLowers
 from backend.Chemicas import Chemichals
@@ -8,10 +7,10 @@ from backend.Chemicas import comunicationChem
 from backend.prices import comunicationprices
 from backend.prices import Prices
 from backend.senzori.water.water import intoduce
+from backend.printing import credings
 
 import csv
-from datetime import date
-import os
+
 
 def flowes():
         var = FLowers
@@ -32,10 +31,9 @@ def flowes():
         Damage = var.value[1] * (plants - sold)
         #print("Plants:", plants, '\n', "Sold:", sold, '\n', "Profit:", Profit - cost, "euros", '\n', "Damage:", Damage, "euros", '\n', "Weeks", week, '\n', "Cost:", cost, '\n')
 
-
         Current_Date = datetime.datetime.now()  # datetime.datetime.today().strftime('%d-%b-%Y')
 
-        with open(('./Csv_files/Production_' + str(Current_Date) + '.csv'), 'w') as new_file:
+        with open(("./backend/Csv_files/Production_" + str(Current_Date) + '.csv'), 'w') as new_file:
             csv.writer = csv.writer(new_file, delimiter=' ')
 
             csv.writer.writerow(['Name:', var.value[0]])
@@ -50,3 +48,6 @@ def flowes():
             csv.writer.writerow(['Damage:', Damage, 'euros'])
             csv.writer.writerow(['Weeks', week])
             csv.writer.writerow(['Cost:', cost, 'euros'])
+            new_file.close()
+
+        credings()

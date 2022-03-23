@@ -3,7 +3,7 @@ import csv
 import glob
 
 def readdata():
-    path =r'Csv_files'
+    path = r'Csv_files'
     filenames = glob.glob(path + "/*.csv")
 
     dfs = []
