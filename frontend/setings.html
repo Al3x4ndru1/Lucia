@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/html">
-	<head>
-		<meta charset="UTF-8" />
-		<title>For a new Greenhouse</title>
-
-		<style media="screen">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    	<style media="screen">
 			html,
 			body {
 				top: 0px;
@@ -17,9 +16,9 @@
 				font-size: 25px;
 			}
 		</style>
-	</head>
-	<body>
-		<form action="/add_flower" method="POST" onsubmit="sendForm()">
+</head>
+<body>
+	<form action="/add_flower" method="POST" onsubmit="sendForm()">
 			<label for="flowers">Type of the flower:</label><br />
 
 			<select id="flowers" name="flowers">
@@ -66,6 +65,6 @@
 					});
 				}
 			</script>
-
-	</body>
+        	</form>
+</body>
 </html>
