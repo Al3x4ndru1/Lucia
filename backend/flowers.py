@@ -8,7 +8,8 @@ from backend.prices import comunicationprices
 from backend.prices import Prices
 from backend.senzori.water.water import intoduce
 from backend.printing import credings
-from backend.senzori.luminosity.luminosity1 import importcheck
+from backend.senzori.luminosity.luminosity1 import checklum
+from backend.senzori.temperature.temperature import checktemp
 
 import csv
 import eel
@@ -22,7 +23,8 @@ def flowes():
         intoduce(plants,var.value[5])
         varchem = Chemichals
         varchem = comunicationChem(var.value[2])
-        importcheck(var.value[4])
+        checklum(var.value[4])
+        checktemp(var.value[3])
         eel.Numbarplants(plants)
         eel.Typeplants("Blue")
         # the next print statement will show each var.value meaning, can be uncommented print(" Name:", var.value[0],
