@@ -11,6 +11,7 @@ from backend.printing import credings
 from backend.senzori.luminosity.luminosity1 import importcheck
 
 import csv
+import eel
 
 
 def flowes():
@@ -22,7 +23,8 @@ def flowes():
         varchem = Chemichals
         varchem = comunicationChem(var.value[2])
         importcheck(var.value[4])
-
+        eel.Numbarplants(plants)
+        eel.Typeplants("Blue")
         # the next print statement will show each var.value meaning, can be uncommented print(" Name:", var.value[0],
         # '\n', "Price:", var.value[1], " euros", '\n', "Chemichal:", var.value[2], '\n', "Themperature:",
         # var.value[3], "Celsiu", '\n', "Luminosity", var.value[4], "Watts", '\n', "Waterperplant",var.value[5],

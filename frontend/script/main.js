@@ -3,6 +3,8 @@ import updateLuminosityValue from './updates/lum/updateLuminosityValue.js';
 import updateWaterValue from './updates/water/updateWaterValue.js';
 import updateLedValue from './updates/Led/updateLedValue.js';
 import updateLedTurnValue from './updates/Led/updateLedValueTurn.js';
+import updatePlantsValue from './updates/Numberplants/Numbarplants.js';
+import updateTypeplantsValue from './updates/Type/Typeplants.js';
 
 eel.expose(updateTemp);
 function updateTemp(TempValue){
@@ -34,4 +36,14 @@ function updateLedTurn(LedTurnValue){
 eel.expose(charts);
 function charts(chartValue){
     namescarts(chartValue);
+}
+
+eel.expose(Numbarplants);
+function Numbarplants(PlantsValue){
+    updatePlantsValue(PlantsValue);
+}
+
+eel.expose(Typeplants);
+function Typeplants(TypeplantsValue){
+    updateTypeplantsValue(TypeplantsValue);
 }
