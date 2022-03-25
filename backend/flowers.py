@@ -8,6 +8,7 @@ from backend.prices import comunicationprices
 from backend.prices import Prices
 from backend.senzori.water.water import intoduce
 from backend.printing import credings
+from backend.senzori.luminosity.luminosity1 import importcheck
 
 import csv
 
@@ -20,18 +21,24 @@ def flowes():
         intoduce(plants,var.value[5])
         varchem = Chemichals
         varchem = comunicationChem(var.value[2])
+        importcheck(var.value[4])
 
-        #print(varchem.value[0])
-        #print(" Name:", var.value[0], '\n', "Price:", var.value[1], " euros", '\n', "Chemichal:", var.value[2], '\n', "Themperature:", var.value[3], "Celsiu", '\n', "Luminosity", var.value[4], "Watts", '\n', "Waterperplant",var.value[5], "liters")
+        # the next print statement will show each var.value meaning, can be uncommented print(" Name:", var.value[0],
+        # '\n', "Price:", var.value[1], " euros", '\n', "Chemichal:", var.value[2], '\n', "Themperature:",
+        # var.value[3], "Celsiu", '\n', "Luminosity", var.value[4], "Watts", '\n', "Waterperplant",var.value[5],
+        # "liters")
+
 
         sold = random.randint(0, plants)
         week = random.randint(14, 16)
         cost = ((watercost * var.value[5] * (plants / 10)) + varchem.value[1] * (plants / 8)) * week
         Profit = var.value[1] * sold
         Damage = var.value[1] * (plants - sold)
-        #print("Plants:", plants, '\n', "Sold:", sold, '\n', "Profit:", Profit - cost, "euros", '\n', "Damage:", Damage, "euros", '\n', "Weeks", week, '\n', "Cost:", cost, '\n')
 
         Current_Date = datetime.datetime.now()  # datetime.datetime.today().strftime('%d-%b-%Y')
+        # in the right part is the corect code but I chosed to add the time as well to be able to create more csv in
+        # a shord period of time
+
 
         with open(("./backend/Csv_files/Production_" + str(Current_Date) + '.csv'), 'w') as new_file:
             csv.writer = csv.writer(new_file, delimiter=' ')
@@ -50,4 +57,4 @@ def flowes():
             csv.writer.writerow(['Cost:', cost, 'euros'])
             new_file.close()
 
-        credings()
+        credings() # read the csv files

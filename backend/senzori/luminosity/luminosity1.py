@@ -5,11 +5,23 @@ from backend.senzori.leds.ledsw import ladd
 
 import eel
 
+global check
+global times
+times=5
 
-def luminosity(check):
+def importcheck(check):
+    check=check
+
+
+
+def luminosity():
     while True:
         var = randint(0, 100)
         eel.updateLuminosity(var)
-        if var <check:
+        if var<=check:
             ladd()
-        time.sleep(5)
+            times=1
+        else:
+            times=5
+
+        time.sleep(times)
