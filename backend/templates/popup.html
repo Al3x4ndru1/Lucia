@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+	<head>
+		<meta charset="UTF-8" />
+		<title>For a new Greenhouse</title>
+
+		<style media="screen">
+			html,
+			body {
+				top: 0px;
+				padding-top: 0px;
+				width: 950px;
+				height: 50%;
+				background-color: #333;
+				min-height: 50vh;
+				font-family: Arial, serif;
+				font-size: 25px;
+			}
+		</style>
+	</head>
+	<body>
+		<form action="/add_flower" method="POST" onsubmit="sendForm()">
+			<label for="flowers">Type of the flower:</label><br />
+
+			<select id="flowers" name="flowers">
+				<option value="Hiacintus">Hiacintus</option>
+				<option value="Rose">Rose</option>
+			</select>
+			<br /><br />
+			<label for="nrflowers">How many flowers do you have:</label><br />
+			<input
+				type="text"
+				placeholder="100"
+				required="required"
+				id="nrflowers"
+				name="nrflowers"
+			/>
+			<br />
+			<br /><br />
+			<label for="type">Type of the plant:</label><br />
+			<input
+				type="text"
+				placeholder="For Hiacintus, Blue jacket"
+				id="type"
+				required="required"
+				name="type"
+			/>
+			<br /><br />
+			<input type="submit" />
+
+			<script type="text/javascript">
+				function sendForm() {
+					const flower = document.getElementByID('flowers').value;
+					const nrflowers = document.getElementByID('nrflowers').value;
+					const type = document.getElementByID('type').value;
+
+					const dist_value = { flower, nrflowers, type };
+					const s = JSON.stringify(dist_value);
+					console.log(s);
+					window.alert(s);
+					$.ajax({
+						url: '/add_flower',
+						type: 'POST',
+						contentType: 'application/json',
+						data: JSON.stringify(s),
+					});
+				}
+			</script>
+		</form>
+	</body>
+</html>

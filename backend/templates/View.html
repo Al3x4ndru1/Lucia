@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Autonom Greenhouses</title>
+  	<script type="text/javascript" src="/eel.js"></script>
+    <script defer type="module" src="./script/main.js"></script>
+    <link rel="stylesheet" href="design.css" />
+    <link
+         rel="stylesheet"
+         href="{{ url_for('static', filename='design.css') }}"
+    />
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</head>
+
+<body>
+
+
+<article>
+
+    <fieldset>
+     <chartbutn>
+      <a href="charts/Barchart.html"><ion-icon name="analytics-outline"></ion-icon></a>
+      <a href=""><ion-icon name="settings-outline"></ion-icon></a>
+    </chartbutn>
+
+</fieldset>
+    <fieldset>
+
+        <legend>
+              Temperarure
+          </legend>
+         <div class="readings">
+          <conditions>
+             <div>
+                 <p class="TempValue11">0°C</p>
+                 </div>
+                </conditions>
+         </div>
+        </fieldset>
+
+       <fieldset>
+        <legend>
+             Luminosity
+          </legend>
+           <div class="readings">
+             <conditions>
+                 <div>
+        <p class="LuminosityValue11">1000</p>
+            </div>
+                   </conditions>
+           </div>
+        </fieldset>
+           <fieldset>
+        <legend>
+             Led
+          </legend>
+               <div class="readings">
+             <conditions>
+                 <div>
+                     <p class="LedTurnValue11">Off</p>
+                 </div>
+                   </conditions>
+               </div>
+        </fieldset>
+      <fieldset>
+        <legend>
+           Plant
+          </legend>
+            <conditions>
+         Rose
+                  </conditions>
+        </fieldset>
+      <fieldset>
+        <legend>
+           Water
+          </legend>
+          <div class="readings">
+          <conditions>
+              <div>
+         <p class="WaterValue11">0%</p>
+              </div>
+              </conditions>
+          </div>
+        </fieldset>
+    </div>
+        <div style="text-align:left">
+              </fieldset>
+      <button onclick="playPause()">Play/Pause</button>
+
+ <br><br>
+    <video width="400" controls>
+        <source src="" type="video/mp4">
+        <source src="https://www.bigbuckbunny.org/" type="video/ogg">
+
+</video>
+        </div>
+
+        
+<map>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d19849.457188728156!2d0.0352543!3d51.546558899999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2suk!4v1638394805326!5m2!1sen!2suk"
+
+position = down width="600" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+</map>
+</article>
+
+
+<aside>
+        <div class="righttmenuinnerinner">
+            In this example, we have created a header, two columns/boxes and a footer. On smaller screens, the columns will stack on top of each other.
+            In this example, we have created a header, two columns/boxes and a footer. On smaller screens, the columns will stack on top of each other.
+        </div>
+
+
+
+      <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname" value="John"><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname" value="Doe"><br><br>
+  <input type="submit" value="Submit">
+</aside>
+
+    <addbutton>
+        <a href="/popup">Add buton</a>
+    </addbutton>
+</aside>
+
+
+</body>
+</html>
